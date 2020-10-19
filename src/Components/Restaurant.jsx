@@ -29,7 +29,7 @@ class Restaurant extends Component {
 		const proxyurl = 'https://cors-anywhere.herokuapp.com/';
 		const apiUrl = `https://maps.googleapis.com/maps/api/place/search/json?start=0&count=10&location=${this.props
 			.locationFromMap.lat},${this.props.locationFromMap
-			.lng}&radius=15000&types=lodging&key=AIzaSyDHfcA_b9zwn_AHKV5ex8DxEganh6TAWp8`;
+			.lng}&radius=15000&types=lodging&key=GoogleApiKey`;
 
 		fetch(proxyurl + apiUrl).then((response) => response.json()).then((data) => {
 			console.log('fetching the api');
@@ -48,7 +48,7 @@ class Restaurant extends Component {
 		
 			apiUrl= 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=' +
 			this.getPhotoReference(item)  +
-		   '&key=AIzaSyDHfcA_b9zwn_AHKV5ex8DxEganh6TAWp8'
+		   '&key=GoogleApiKey'
 		   if(!apiUrl.ok){
 			   console.log("it is okay");
 			   photoUrl=apiUrl;
@@ -345,7 +345,7 @@ class Restaurant extends Component {
 									src={
 										'https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=' +
 										 this.getPhotoReference(item)  +
-										'&key=AIzaSyDHfcA_b9zwn_AHKV5ex8DxEganh6TAWp8'
+										'&key=GoogleApiKey'
 									}
 									alt=""
 								/>
