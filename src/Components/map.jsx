@@ -11,7 +11,7 @@ import Geocode from 'react-geocode';
 import { Descriptions, Badge } from 'antd';
 
 import AutoComplete from 'react-google-autocomplete';
-Geocode.setApiKey('AIzaSyDHfcA_b9zwn_AHKV5ex8DxEganh6TAWp8');
+Geocode.setApiKey('GoogleApiKey');
 
 class Map extends React.Component {
 	state = {
@@ -209,7 +209,7 @@ class Map extends React.Component {
 					<Descriptions.Item label="Adress">{this.state.address}</Descriptions.Item>
 				</Descriptions>
 				<MapWithAMarker
-					googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHfcA_b9zwn_AHKV5ex8DxEganh6TAWp8&v=3.exp&libraries=geometry,drawing,places"
+					googleMapURL="https://maps.googleapis.com/maps/api/js?key=GoogleApiKey&v=3.exp&libraries=geometry,drawing,places"
 					loadingElement={<div style={{ height: `100%` }} />}
 					containerElement={<div style={{ height: `400px` }} />}
 					mapElement={<div style={{ height: `100%` }} />}
